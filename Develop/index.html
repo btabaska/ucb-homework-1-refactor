@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>website</title>
 </head>
-
 <body>
     <header>
+        <!-- Refactored the header to reflect the fact that it should use a <header> tag -->
         <h1>Hori<span class="seo">seo</span>n</h1>
         <div>
             <ul>
@@ -24,9 +24,13 @@
             </ul>
         </div>
     </header>
-    <div class="image-center-main"></div>
+    <!-- Refactored to image-center-main class, wanted to keep away from semantic tag / class since that would put the image in every time you used it and this image should be used once -->
+    <div id="image-center-main"></div>
+    <!-- Refactored to use main since this is the main content of the site that screen readers will want to look at, thought about using section, but this seems more like the main body -->
     <main>
+        <!-- Refactored to use Article since these are all articles within the main tag -->
         <article>
+            <!-- refactored all of this to remove CSS bloat, too many classes used when the job can be done with the aside tag -->
             <img src="./assets/images/search-engine-optimization.jpg" class="float-left" />
             <h2>Search Engine Optimization</h2>
             <p>
@@ -48,7 +52,9 @@
             </p>
         </article>
     </main>
+    <!-- refactored to use aside since this is all within an aside to the main tag and off to the side -->
     <aside>
+        <!-- Removed some CSS bloat from the divs, consolidated to the aside-content class for each div -->
         <div class="aside-content">
             <h3>Lead Generation</h3>
             <img src="./assets/images/lead-generation.png" />
@@ -71,6 +77,7 @@
             </p>
         </div>
     </aside>
+    <!-- Changed bottom div to reflect that this is a footer -->
     <footer>
         <h2>Made with ❤️️ by Horiseon</h2>
         <p>
